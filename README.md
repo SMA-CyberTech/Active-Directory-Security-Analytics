@@ -25,3 +25,5 @@ Brute force attacks generate multiple log events of “failed log in attempts”
 <img width="700" height="472" alt="Screenshot 2026-06-27 164319" src="https://github.com/user-attachments/assets/66733f58-b4a4-427c-9687-7ce96a444718" />
 
 *Ref 2: Windows Server Domain*
+
+Before creating an Active Directory Environment, Active Directory Domain Services had to be installed and configured. This is so that we could utilise the Domain feature and create users and groups. As seen above, we created a user named Kulle KO. Otsuka and added him to the Tech Team security group. Now we are able to sign into the domain using the credentials that we have associated with Kulle's account. The Windows 10 Client uses this account to sign into the domain "splunklab.local".
