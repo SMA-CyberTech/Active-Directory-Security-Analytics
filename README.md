@@ -34,9 +34,9 @@ Splunk Enterprise has been installed and configured on an Ubuntu Linux virtual m
 
 In order to create a specific index for Splunk to ingest data into, we needed to configure a specific file telling it what to name the index and what data to ingest. The process is to copy the file "C:\Program Files\SplunkUniversalForwarder\etc\system\default\inputs.conf" into "C:\Program Files\SplunkUniversalForwarder\etc\system\local\" if it is not there already.
 
-I have editted the file with notepad and added this line:
-[WinEventLog://Security]
-index = ad_logs
+I have editted the file with notepad and added this line:\
+[WinEventLog://Security]\
+index = ad_logs\
 disabled = false
 
 This tells Splunk Universal Forwarder to forward the Windows Security logs into an index named "ad_logs" that must not be disabled.
