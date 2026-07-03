@@ -13,6 +13,6 @@ The aim of the project was to generate alerts for brute force attacks targeting 
 
 ## Summary
 
-<img width="1084" height="687" alt="Diagram" src="https://github.com/user-attachments/assets/a077f298-f61e-4344-8af0-04ac1453115b" />
+<img width="542" height="344" alt="Diagram" src="https://github.com/user-attachments/assets/a077f298-f61e-4344-8af0-04ac1453115b" />
 
 *Ref 1: Network Diagram*
