@@ -17,7 +17,7 @@ The aim of the project was to generate alerts for brute force attacks targeting 
 
 *Ref 1: Network Diagram*
 
-Three main virtual machines were used; the first VM hosted the Windows Server, the second hosted the Splunk Enterprise Server and the third hosted the Windows 10 client machine which acted as the endpoint. All VM’s are within the same network environment, hence the green square. Essentially, an alert for multiple failed login attempts is triggered and the device name as well as a link to the alert is sent into a preconfigured channel in Slack for investigation.
+Three main virtual machines were used; the first VM hosted the Windows Server, the second hosted the Splunk Enterprise Server and the third hosted the Windows 10 client machine which acted as the endpoint. All VM’s are within the same network environment, hence the green square. Essentially, an alert for multiple failed login attempts is triggered and the device name as well as a link to the alert is sent into a preconfigured channel in Slack for investigation. it is important to note that all devices used in this project have been configured with static IP addresses for absolute referenceing which helps avoid errors
 
 Brute force attacks generate multiple log events of “failed log in attempts” and Windows logs this in its Security group as Event ID 4625. This Event ID is crucial when creating an alert on Splunk. A service called Splunk Universal forwarder is installed onto the Windows endpoint pointing to the IP address that is hosting Splunk Enterprise. This service forwards the Security logs which can be viewed on Splunk’s Dashboard on a browser. 
 
@@ -27,3 +27,5 @@ Brute force attacks generate multiple log events of “failed log in attempts”
 *Ref 2: Windows Server Domain*
 
 Before creating an Active Directory environment, Active Directory Domain Services(AD DS) had to be installed and configured. This is so that we could utilise the Domain feature and create users and groups. As seen above, we created a user named Kulle KO. Otsuka and added him to the Tech Team security group. Now we are able to sign into the domain using the credentials that we have associated with Kulle's account. The Windows 10 Client uses this account to sign into the domain "splunklab.local".
+
+Splunk Enterprise has been installed and configured on an Ubuntu Linux virtual machine. The Splunk Universal forwarder is installed on the Windows 10 client pointing to the IP address of the Linux VM machine.
