@@ -2,7 +2,7 @@
 
 ## Objective
 
-The aim of the project was to generate alerts for brute force attacks targeting endpoints within an Active Directory Domain environment and forward these triggered events to a central Cybersecurity Analyst channel. Splunk, Windows Active Directory DC, Shuffle and Slack were use to complete the telemetry cycle.
+The aim of the project was to automate the generation alerts for brute force attacks targeting endpoints within an Active Directory Domain environment and forward these triggered events to a central Cybersecurity Analyst channel. Splunk, Windows Active Directory DC, Shuffle and Slack were use to complete the telemetry cycle.
 
 ### Tools Used
 
