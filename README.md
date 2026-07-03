@@ -29,3 +29,12 @@ Brute force attacks generate multiple log events of “failed log in attempts”
 Before creating an Active Directory environment, Active Directory Domain Services(AD DS) had to be installed and configured. This is so that we could utilise the Domain feature and create users and groups. As seen above, we created a user named Kulle KO. Otsuka and added him to the Tech Team security group. Now we are able to sign into the domain using the credentials that we have associated with Kulle's account. The Windows 10 Client uses this account to sign into the domain "splunklab.local".
 
 Splunk Enterprise has been installed and configured on an Ubuntu Linux virtual machine. The Splunk Universal forwarder is installed on the Windows 10 client pointing to the IP address of the Linux VM machine.
+
+In order to create a specific index for Splunk to ingest data into, we needed to configure a specific file telling it what to name the index and what data to ingest. The process is to copy the file "C:\Program Files\SplunkUniversalForwarder\etc\system\default\inputs.conf" into "C:\Program Files\SplunkUniversalForwarder\etc\system\local\" if it is not there already.
+
+I have editted the file with notepad and added this line:
+[WinEventLog://Security]
+index = ad_logs
+disabled = false
+
+
