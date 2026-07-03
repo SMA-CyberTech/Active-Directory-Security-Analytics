@@ -2,7 +2,7 @@
 
 ## Objective
 
-The aim of the Active Directory project was to create a domain of endpoints in order to generate and forward failed login attempt alerts (Windows Event ID 4626) that can be identified as potential attacks targetting the endpoint machine.
+The aim of the Active Directory project was to create a domain of endpoints in order to generate and forward failed login attempt alerts (Windows Event ID 4625) that can be identified as potential attacks targetting the endpoint machine. Splunk, Windows Active Directory DC and Slack were use to complete the telemetry cycle.
 
 ### Skills Learned
 
