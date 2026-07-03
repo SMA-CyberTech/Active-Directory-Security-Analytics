@@ -64,5 +64,11 @@ With only the prompt, we would run into too many false positives as we need to a
 As seen in [Ref 4](https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda), after the event is triggered we input Shuffle's webhook into the alert so that data can be forwarded to Slack. 
 
 
+<img width="1365" height="244" alt="Screenshot 2026-06-27 165559" src="https://github.com/user-attachments/assets/37bb981c-f7f7-4587-88c1-a997f320b882" />
+
+*Ref 5: Slack integration with Shuffle*
+
+This is the result on the Splunk --> Shuffle --> Slack integration. Once the link is clicked the user is taken straight to the Splunk dashboard to investigate the triggered alert.
+
 
 
