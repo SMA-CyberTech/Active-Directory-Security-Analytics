@@ -23,3 +23,5 @@ Brute force attacks generate multiple log events of “failed log in attempts”
 
 
 <img width="700" height="472" alt="Screenshot 2026-06-27 164319" src="https://github.com/user-attachments/assets/66733f58-b4a4-427c-9687-7ce96a444718" />
+
+*Ref 2: Windows Server Domain*
