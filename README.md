@@ -2,7 +2,7 @@
 
 ## Objective
 
-The aim of the project was to automate the generation alerts for brute force attacks targeting endpoints within an Active Directory Domain environment and forward these triggered events to a central Cybersecurity Analyst channel. Splunk, Windows Active Directory DC, Shuffle and Slack were use to complete the telemetry cycle.
+The aim of the project was to automate the generation of alerts for brute force attacks targeting endpoints within an Active Directory Domain environment and forward these triggered events to a central Cybersecurity Analyst channel. Splunk, Windows Active Directory DS, Shuffle and Slack were use to complete the telemetry cycle.
 
 ### Tools Used
 
@@ -17,16 +17,16 @@ The aim of the project was to automate the generation alerts for brute force att
 
 *Ref 1: Network Diagram*
 
-Three main virtual machines were used; the first VM hosted the Windows Server, the second hosted the Splunk Enterprise Server and the third hosted the Windows 10 client machine which acted as the endpoint. All VM’s are within the same network environment, hence the green square. Essentially, an alert for multiple failed login attempts is triggered and the device name as well as a link to the alert is sent into a preconfigured channel in Slack for investigation. it is important to note that all devices used in this project have been configured with static IP addresses for absolute referenceing which helps avoid errors
+Three main virtual machines were used; the first VM hosted the Windows Server, the second hosted the Splunk Enterprise Server and the third hosted the Windows 10 client machine which acted as the endpoint. All VM’s are within the same network environment, hence the green square. Essentially, an alert for multiple failed login attempts is triggered and a link to the alert is sent into a preconfigured channel in Slack for investigation. it is important to note that all systems used in this project have been configured with static IP addresses for absolute referencing which helps us avoid potential errors
 
-Brute force attacks generate multiple log events of “failed log in attempts” and Windows logs this in its Security group as Event ID 4625. This Event ID is crucial when creating an alert on Splunk. A service called Splunk Universal forwarder is installed onto the Windows endpoint pointing to the IP address that is hosting Splunk Enterprise. This service forwards the Security logs which can be viewed on Splunk’s Dashboard on a browser. 
+Brute force attacks generate multiple log events of “failed log in attempts” and Windows logs this in it's Security group as Event ID 4625. This Event ID is crucial when creating an alert on Splunk. A service called Splunk Universal forwarder is installed onto the Windows endpoint pointing to the IP address that is hosting Splunk Enterprise. This service forwards the Security logs which can be viewed on Splunk’s Dashboard on a browser. 
 
 
 <img width="700" height="472" alt="Screenshot 2026-06-27 164319" src="https://github.com/user-attachments/assets/66733f58-b4a4-427c-9687-7ce96a444718" />
 
 *Ref 2: Windows Server Domain*
 
-Before creating an Active Directory environment, Active Directory Domain Services(AD DS) had to be installed and configured. This is so that we could utilise the Domain feature and create users and groups. As seen above, we created a user named Kulle KO. Otsuka and added him to the Tech Team security group. Now we are able to sign into the domain using the credentials that we have associated with Kulle's account. The Windows 10 Client uses this account to sign into the domain "splunklab.local".
+Before creating an Active Directory environment, Active Directory Domain Services (AD DS) had to be installed and configured. This is so that we could utilise the Domain feature and create users and groups. As seen above, we created a user named Kulle KO. Otsuka and added him to the Tech Team security group. Now we are able to sign into the domain using the credentials that we have associated with Kulle's account. The Windows 10 Client uses this account to sign into the domain "splunklab.local".
 
 <img width="490" height="54" alt="Screenshot 2026-06-19 171537" src="https://github.com/user-attachments/assets/3f947838-3164-449b-8695-923f2cc5ea6b" />
 
@@ -48,7 +48,7 @@ This tells Splunk Universal Forwarder to forward the Windows Security logs into 
 
 *Ref 4: SPL Alert Prompt*
 
-This Slunk prompt tells the dashboard to display Events from the ad_logs index containing Event Code 4625 from the Windows 10 endpoint, where said events appear more than 3 times.
+This Splunk prompt tells the dashboard to display Events from the ad_logs index containing Event Code 4625 from the Windows 10 endpoint, where said events appear more than 3 times.
 
 
 <img width="601" height="254" alt="Screenshot 2026-06-27 165239" src="https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda" />
@@ -68,7 +68,7 @@ As seen in [Ref 4](https://github.com/user-attachments/assets/9faaa790-397d-4f82
 
 *Ref 5: Slack integration with Shuffle*
 
-This is the result on the Splunk --> Shuffle --> Slack integration. Once the link is clicked the user is taken straight to the Splunk dashboard to investigate the triggered alert.
+This is the result of the Splunk --> Shuffle --> Slack integration. Once the link is clicked the user is taken straight to the Splunk dashboard to investigate the triggered alert.
 
 
 
