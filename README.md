@@ -41,4 +41,8 @@ disabled = false
 
 This tells Splunk Universal Forwarder to forward the Windows Security logs into an index named "ad_logs" that must not be disabled.
 
+<img width="419" height="132" alt="Screenshot 2026-06-27 165252" src="https://github.com/user-attachments/assets/fbb35ddd-4151-434a-b536-81ad89677670" /> <img width="601" height="254" alt="Screenshot 2026-06-27 165239" src="https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda" />
+
+
+
 
