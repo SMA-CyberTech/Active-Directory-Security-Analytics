@@ -11,7 +11,8 @@ The aim of the project was to generate alerts for brute force attacks targeting 
 - Windows Server to act as the domain controller within the Active Directory environment.
 - Slack for communication and recieving triggered alerts.
 
-## Steps
+## Summary
 
+<img width="1084" height="687" alt="Diagram" src="https://github.com/user-attachments/assets/a077f298-f61e-4344-8af0-04ac1453115b" />
 
 *Ref 1: Network Diagram*
