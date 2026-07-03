@@ -6,9 +6,10 @@ The aim of the project was to generate alerts for brute force attacks targeting 
 
 ### Tools Used
 
-- Splunk for Windows Security log ingestion and data analysis.
+- Splunk for Windows Security log ingestion, data analysis and alert creation.
 - Shuffle for automation and the integration of Slack into the workflow.
-- Windows Server to act as the domain controller within the Active Directory environment .
+- Windows Server to act as the domain controller within the Active Directory environment.
+- Slack for communication and recieving triggered alerts.
 
 ## Steps
 
