@@ -30,6 +30,8 @@ Before creating an Active Directory environment, Active Directory Domain Service
 
 <img width="490" height="54" alt="Screenshot 2026-06-19 171537" src="https://github.com/user-attachments/assets/3f947838-3164-449b-8695-923f2cc5ea6b" />
 
+*Ref 3: Splunk Universal Forwarder*
+
 Splunk Enterprise has been installed and configured on an Ubuntu Linux virtual machine. The Splunk Universal forwarder is installed on the Windows 10 client pointing to the IP address of the Linux VM machine.
 
 In order to create a specific index for Splunk to ingest data into, we needed to configure a specific file telling it what to name the index and what data to ingest. The process is to copy the file "C:\Program Files\SplunkUniversalForwarder\etc\system\default\inputs.conf" into "C:\Program Files\SplunkUniversalForwarder\etc\system\local\" if it is not there already.
@@ -41,8 +43,16 @@ disabled = false
 
 This tells Splunk Universal Forwarder to forward the Windows Security logs into an index named "ad_logs" that must not be disabled.
 
-<img width="419" height="132" alt="Screenshot 2026-06-27 165252" src="https://github.com/user-attachments/assets/fbb35ddd-4151-434a-b536-81ad89677670" /> <img width="601" height="254" alt="Screenshot 2026-06-27 165239" src="https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda" />
+<img width="419" height="132" alt="Screenshot 2026-06-27 165252" src="https://github.com/user-attachments/assets/fbb35ddd-4151-434a-b536-81ad89677670" />
 
+*Ref 4: SPL Alert Prompt*
 
+This Slunk prompt tells the dashboard to display Events from the ad_logs index containing Event Code 4625 from the Windows 10 endpoint, where said events appear more than 3 times.
+
+<img width="601" height="254" alt="Screenshot 2026-06-27 165239" src="https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda" />
+
+*Ref 4: Alert Settings*
+
+With only the prompt, we would run into too many false possitives as we need to add more specificity to the alert. This is why we have set the alert to trigger when there are 3+ events within the last 5 minutes of the present time (*/5 * * * *).
 
 
