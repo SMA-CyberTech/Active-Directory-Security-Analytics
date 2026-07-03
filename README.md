@@ -37,4 +37,6 @@ I have editted the file with notepad and added this line:
 index = ad_logs
 disabled = false
 
+This tells Splunk Universal Forwarder to forward the Windows Security logs into an index named "ad_logs" that must not be disabled.
+
 
