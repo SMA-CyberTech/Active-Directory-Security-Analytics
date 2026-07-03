@@ -43,16 +43,26 @@ disabled = false
 
 This tells Splunk Universal Forwarder to forward the Windows Security logs into an index named "ad_logs" that must not be disabled.
 
+
 <img width="419" height="132" alt="Screenshot 2026-06-27 165252" src="https://github.com/user-attachments/assets/fbb35ddd-4151-434a-b536-81ad89677670" />
 
 *Ref 4: SPL Alert Prompt*
 
 This Slunk prompt tells the dashboard to display Events from the ad_logs index containing Event Code 4625 from the Windows 10 endpoint, where said events appear more than 3 times.
 
+
 <img width="601" height="254" alt="Screenshot 2026-06-27 165239" src="https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda" />
 
 *Ref 4: Alert Settings*
 
 With only the prompt, we would run into too many false positives as we need to add more specificity to the alert. What if someone accidently logged in with the wrong credentials once every week? This is why we have set the alert to trigger when there are 3+ events within the last 5 minutes of the present time (*/5 * * * *).
+
+<img width="716" height="255" alt="Screenshot 2026-07-03 150336" src="https://github.com/user-attachments/assets/9c9c3c70-0257-48a4-b783-4068f49c4140" />
+
+*Ref 5: Slack integration with Shuffle*
+
+As seen in Ref 4, after the event is triggered we input Shuffle's webhook into the alert so that data can be forwarded to Slack. 
+
+
 
 
