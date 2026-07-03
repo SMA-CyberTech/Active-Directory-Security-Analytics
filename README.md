@@ -53,6 +53,6 @@ This Slunk prompt tells the dashboard to display Events from the ad_logs index c
 
 *Ref 4: Alert Settings*
 
-With only the prompt, we would run into too many false possitives as we need to add more specificity to the alert. What if someone accidently logged in with the wrong credentials once every week? This is why we have set the alert to trigger when there are 3+ events within the last 5 minutes of the present time (*/5 * * * *).
+With only the prompt, we would run into too many false positives as we need to add more specificity to the alert. What if someone accidently logged in with the wrong credentials once every week? This is why we have set the alert to trigger when there are 3+ events within the last 5 minutes of the present time (*/5 * * * *).
 
 
