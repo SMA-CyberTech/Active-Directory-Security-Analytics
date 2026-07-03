@@ -2,21 +2,13 @@
 
 ## Objective
 
-The aim of the project was to generate alerts for brute force attacks targeting endpoints within an Active Directory Domain environment and forward these triggered events to a central Cybersecurity Analyst channel. Splunk, Windows Active Directory DC and Slack were use to complete the telemetry cycle.
-
-### Skills Learned
-
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+The aim of the project was to generate alerts for brute force attacks targeting endpoints within an Active Directory Domain environment and forward these triggered events to a central Cybersecurity Analyst channel. Splunk, Windows Active Directory DC, Shuffle and Slack were use to complete the telemetry cycle.
 
 ### Tools Used
 
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+- Splunk for Windows Security log ingestion and data analysis.
+- Shuffle for automation and the integration of Slack into the workflow.
+- Windows Server to act as the domain controller within the Active Directory environment .
 
 ## Steps
 
