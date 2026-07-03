@@ -61,7 +61,7 @@ With only the prompt, we would run into too many false positives as we need to a
 
 *Ref 5: Slack integration with Shuffle*
 
-As seen in Ref 4, after the event is triggered we input Shuffle's webhook into the alert so that data can be forwarded to Slack. 
+As seen in [Ref 4](https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda), after the event is triggered we input Shuffle's webhook into the alert so that data can be forwarded to Slack. 
 
 
 
