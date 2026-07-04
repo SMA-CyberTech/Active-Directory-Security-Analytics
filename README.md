@@ -2,14 +2,14 @@
 
 ## Objective
 
-The aim was to simulate credential dumping attacks via Powershell, targetting a workstation connected to a network that is being monitored by a Security Incident and Event Management tool. The simulated attack takes place after the attacker has already gained access to the workstation.
+The aim of the project was to automate the generation of alerts for brute force attacks targeting endpoints within an Active Directory Domain environment and forward these triggered events to a central Cybersecurity Analyst channel. Splunk, Windows Active Directory DS, Shuffle and Slack were use to complete the telemetry cycle.
 
 ### Tools Used
 
 - Splunk Enterprise for Windows Security log ingestion, data analysis and alert creation.
 - Shuffle for automation and the integration of Slack into the workflow.
 - Windows Server to act as the domain controller within the Active Directory environment.
-- Slack for communication and recieving triggered alerts.
+- Slack for communication and receiving triggered alerts.
 
 ## Summary
 
